@@ -1,15 +1,16 @@
 # Ceramic Defect OpenAlex Assistant
 
-Arabic-first ceramic defect assistant powered by OpenAlex search, ceramic-aware
-reranking, and short practical research summaries.
+Open-source Arabic-first assistant for ceramic manufacturing defect diagnosis,
+quality control, and materials-science research search using OpenAlex,
+ceramic-aware reranking, and short practical research summaries.
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Python](https://img.shields.io/badge/python-3.x-blue.svg)
 ![OpenAlex](https://img.shields.io/badge/research-OpenAlex-orange.svg)
 
-![Interface Preview](docs/interface-preview.png)
-
-Illustrative preview for the public repository.
+Keywords: ceramic defects, ceramic manufacturing, ceramic engineering, quality
+control, defect diagnosis, drying cracks, porosity, glaze crazing, materials
+science, OpenAlex, Arabic engineering tools.
 
 ## عربي
 
@@ -43,8 +44,6 @@ Illustrative preview for the public repository.
   نقطة تشغيل خفيفة
 - `openalex_config.example.json`
   مثال لإعداد بريد التواصل أو مفتاح OpenAlex
-- `docs/interface-preview.png`
-  معاينة واجهة توضيحية للصفحة
 
 ## ما ليس موجودًا هنا
 
