@@ -1,0 +1,7 @@
+{
+  "api_key": "",
+  "email": "",
+  "per_page": 8,
+  "timeout_seconds": 15,
+  "enable_semantic": true
+}
