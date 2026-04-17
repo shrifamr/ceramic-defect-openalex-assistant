@@ -1,66 +1,89 @@
-# Ceramic Solutions Studio OpenAlex Bridge
+# Ceramic Defect OpenAlex Assistant
 
-OpenAlex-powered search bridge for an Arabic ceramic manufacturing assistant.
+Arabic-first ceramic defect assistant powered by OpenAlex search, ceramic-aware
+reranking, and short practical research summaries.
 
-This public repository shares the OpenAlex integration layer, search expansion,
-result reranking, live suggestions, and short article summaries used to enrich
-ceramic defect diagnosis.
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Python](https://img.shields.io/badge/python-3.x-blue.svg)
+![OpenAlex](https://img.shields.io/badge/research-OpenAlex-orange.svg)
 
-## What is included
+![Interface Preview](docs/interface-preview.png)
 
-- `openalex_ceramic_bridge.py`
-  OpenAlex search logic and Tkinter bridge layer.
-- `CeramicSolutionsStudio_OpenAlex.py`
-  Small launcher entry point.
-- `openalex_config.example.json`
-  Optional config template for OpenAlex email or API key.
+Illustrative preview for the public repository.
 
-## What is intentionally not included
+## عربي
 
-This public repository does not include:
+هذا المشروع يشارك الطبقة الذكية التي تضيف إلى مساعد مشاكل السيراميك:
 
-- packaged `.exe` builds
-- extracted runtime files from the original desktop application
-- local build output
-
-That keeps the public repo lightweight and avoids publishing bundled binaries or
-runtime artifacts that are better kept in a private archive.
-
-## Main features
-
-- hybrid OpenAlex search:
+- بحث OpenAlex هجين:
   - exact search
   - boolean expansion
   - semantic search
-  - related works expansion
-- Arabic and English query expansion for ceramic defects
-- live search suggestions while typing
-- ceramic-specific reranking to reduce noisy papers
-- short article summaries to save operator time
-- practical solution bullets with confidence indicators
+  - related works
+- توسيع ذكي للاستعلامات بالعربي والإنجليزي لمشاكل السيراميك
+- اقتراحات أثناء الكتابة
+- تلخيص سريع للمقالات بدل القراءة الطويلة
+- حلول عملية متعددة مع ترتيب أفضل للنتائج الخاصة بالسيراميك الصناعي
+- درجة ثقة أوضح في التشخيص
 
-## Typical use
+## فكرة المشروع
 
-This bridge is designed to sit beside an existing Ceramic Solutions Studio
-runtime, or to be adapted into another Python desktop assistant.
+بدل أن يقرأ المستخدم مقالات كثيرة ليعرف سبب المشكلة، هذا المشروع يحاول أن:
+
+- يفهم مشكلة السيراميك المكتوبة من المستخدم
+- يربطها بأقرب أبحاث من OpenAlex
+- يفلتر النتائج البعيدة عن صناعة السيراميك
+- يخرج السبب الأقرب والحلول العملية بشكل مختصر
+
+## ما الموجود في الريبو العام
+
+- `openalex_ceramic_bridge.py`
+  منطق البحث، التوسيع، الفلترة، الترتيب، والتلخيص
+- `CeramicSolutionsStudio_OpenAlex.py`
+  نقطة تشغيل خفيفة
+- `openalex_config.example.json`
+  مثال لإعداد بريد التواصل أو مفتاح OpenAlex
+- `docs/interface-preview.png`
+  معاينة واجهة توضيحية للصفحة
+
+## ما ليس موجودًا هنا
+
+هذا الريبو العام لا يحتوي على:
+
+- ملفات `.exe`
+- ملفات runtime المستخرجة من التطبيق الأصلي
+- نواتج البناء المحلية
+
+السبب هو إبقاء النسخة العامة أخف وأنظف وأسهل للاستفادة، مع ترك الأرشيف الكامل
+في الريبو الخاص.
+
+## Quick Start
 
 If you already have the original runtime locally:
 
-1. Place these files next to the original extracted runtime folder.
-2. Optionally copy `openalex_config.example.json` to `openalex_config.json`.
+1. Place these files next to the extracted runtime folder.
+2. Copy `openalex_config.example.json` to `openalex_config.json` if needed.
 3. Run:
 
 ```powershell
 python .\CeramicSolutionsStudio_OpenAlex.py
 ```
 
+## Typical use cases
+
+- diagnosing drying cracks in ceramic tiles
+- understanding high porosity or water absorption problems
+- summarizing glaze crazing or pinhole research
+- generating practical fixes from research instead of raw paper lists
+
 ## Notes
 
-- The code uses only Python standard library modules for the OpenAlex requests.
-- The bridge expects the original app runtime structure if used as-is.
-- If you are building your own interface, you can reuse the OpenAlex search and
-  summarization logic directly from `openalex_ceramic_bridge.py`.
+- This public repo shares the OpenAlex bridge layer only.
+- The bridge currently expects the original app runtime structure if used as-is.
+- You can still reuse the OpenAlex search logic independently in another Python
+  desktop or web interface.
 
 ## License
 
-Released under the MIT License so others can study, reuse, and improve it.
+Released under the MIT License so others can study it, build on it, and adapt
+it to their own ceramic quality or research workflows.
